@@ -29,9 +29,9 @@ public class UserController {
     }
 
     /** Get User Details*/
-    @GetMapping("/details/{userId}")
-    public ResponseModel getUserDetails(@PathVariable(name = "userId", required = true) String userId) {
-        log.info("Get user details called!");
-        return ResponseModel.success(HttpStatus.OK, "Success", userService.getUserDetails(userId));
-    }
+//    @GetMapping("/details/{userId}")
+//    public ResponseModel getUserDetails(@PathVariable(name = "userId", required = true) String userId) {
+//        log.info("Get user details called!");
+//        return ResponseModel.success(HttpStatus.OK, "Success", userService.getUserDetails(userId));
+//    }
 }
