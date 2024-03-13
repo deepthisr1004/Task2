@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,9 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-    /** User creation*/
+    /**
+     * User creation
+     */
 
     @PostMapping("/create")
     public Product createproduct(@Valid @RequestBody Product productDetails) {
@@ -26,12 +29,16 @@ public class ProductController {
         return productService.createProduct(productDetails);
     }
 
-    /** Get User Details*/
-    //@GetMapping("/details/{userId}")
-//        public ResponseModel getProductDetails(@PathVariable(name = "ProductId", required = true) Number ProductId) {
-//            log.info("Get Product details called!");
-//            return ResponseModel.success(HttpStatus.OK, "Success", ProductService.getProductDetails(productId));
-//        }
+    /**
+     * Get User Details
+     */
+//    @GetMapping("/details/{userId}")
+//     public ResponseModel getProductDetails(@PathVariable(name = "ProductId", required = true) Number ProductId) {
+//         log.info("Get Product details called!");
+//         return ResponseModel.success(HttpStatus.OK, "Success", ProductService.getProductDetails(productId));
+//     }
+
+
 }
 
 

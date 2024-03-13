@@ -16,4 +16,6 @@ public class UserDto {
     private Boolean isDeleted;
     private Boolean isValid;
     private String role;
+
+
 }

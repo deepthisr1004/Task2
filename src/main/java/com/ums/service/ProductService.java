@@ -21,6 +21,9 @@ public class ProductService {
     public Product createProduct(Product productDetails) {
         return productRepo.save(productDetails);
     }
+    public Product getProductById(Long productID) {
+        return productRepo.findById(String.valueOf(productID)).orElse(null);
+    }
 
     /** Get user details*/
 //    public ProductDto getProductDetails(Number productId) {
@@ -35,4 +38,7 @@ public class ProductService {
 //                .build();
 //
 //    }
+    // ProductService.java
+
+
 }
